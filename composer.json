@@ -1,0 +1,38 @@
+{
+  "name": "kater/ignore-user-extend",
+  "description": "Kater 基于 fof/ignore-users 定制化",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.4",
+    "fof/ignore-users": "*"
+  },
+  "authors": [
+    {
+      "name": "HHY",
+      "email": "1016823618@qq.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Kater\\IgnoreUserExtend\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "K Ignore User",
+      "icon": {
+        "name": "",
+        "backgroundColor": "",
+        "color": ""
+      }
+    },
+    "flagrow": {
+      "discuss": ""
+    }
+  }
+}
