@@ -38,7 +38,22 @@ return [
     (new Extend\ApiSerializer(UserSerializer::class))
         ->attributes(AddUserApiIgnoreList::class),
 
+    /** 搜索模式下 黑名单过滤 */
+    (new Extend\SimpleFlarumSearch(UserSearcher::class))
+        ->addGambit(Search\UserIgnoreGambit::class),
 
+
+    // /*** 废弃  因为有搜索引擎 */
+    // // (new Extend\SimpleFlarumSearch(DiscussionSearcher::class))
+    // //     ->addGambit(Search\DiscussionIgnoreGambit::class),
+
+    // /*** 废弃  因为有搜索引擎 */
+    // // (new Extend\Filter(DiscussionFilter::class))
+    // //     ->addFilter(Search\DiscussionIgnoreGambit::class),
+
+    // /*** 废弃  因为有搜索引擎 */
+    // // (new Extend\Filter(PostFilterer::class))
+    // //     ->addFilter(Filter\PostIgnoreFilterGambit::class),
 
 
     /** 权限过滤 */
