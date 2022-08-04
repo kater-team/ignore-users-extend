@@ -38,5 +38,20 @@ return [
     (new Extend\ApiSerializer(UserSerializer::class))
         ->attributes(AddUserApiIgnoreList::class),
 
+
+
+
+    /** 权限过滤 */
+    (new Extend\ModelVisibility(Discussion::class))
+        ->scope(Access\ScopeDiscussionVisibility::class, 'view'),
+
+    /** 权限过滤 */
+    (new Extend\ModelVisibility(Post::class))
+        ->scope(Access\ScopePostVisibility::class, 'view'),
+
+    /*** 废弃 存在权限冲突  */    
+    // (new Extend\ModelVisibility(User::class))
+    //     ->scope(Access\ScopeUserVisibility::class, "view")
+
   
 ];
