@@ -1,19 +1,26 @@
 import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
 import UsersSearchSource from 'flarum/common/components/UsersSearchSource';
+
+// 组件
+import Link from 'flarum/common/components/Link';
+
+// 工具
 import highlight from 'flarum/common/helpers/highlight';
 import avatar from 'flarum/common/helpers/avatar';
 import username from 'flarum/common/helpers/username';
-import Link from 'flarum/common/components/Link';
 
 
+/** 搜索  过滤黑名单用户  */
 export default function () {
 
     extend(UsersSearchSource.prototype, 'view', function (rt, query) {
 
+        // 清理原内容
         rt.length = 0
+
+
         query = query.toLowerCase();
-        
         const results = (this.results.get(query) || [])
             .concat(
                 app.store
@@ -43,6 +50,7 @@ export default function () {
                 );
             }),
         ].forEach(ele => {
+            // 推送新结构
             rt.push(ele)
         });
 

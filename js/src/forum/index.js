@@ -6,12 +6,13 @@ import IgnoreMentions from "./IgnoreMentions"
 
 
 app.initializers.add('kater/ignore-user-extend', () => {
-    console.log('[kater/ignore-user-extend] Hello, forum!');
 
     User.prototype.ignore_all = Model.attribute('ignore_all');
 
+    /** 用户搜索 黑名单过滤 */
     IgnoreSearchUser()
 
+    /** 富文本 推荐名单过滤  */
     IgnoreMentions()
     
 }, -1);

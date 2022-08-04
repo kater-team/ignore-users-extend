@@ -1,8 +1,8 @@
-import app from 'flarum/forum/app';
 import { compat } from '@flarum/core/forum';
-import { extend, override } from 'flarum/common/extend';
-import TextEditor from 'flarum/common/components/TextEditor';
+import { extend } from 'flarum/common/extend';
 
+
+/** 过滤 推荐名单  */
 export default function () {
 
     let db = compat['mentions/fragments/AutocompleteDropdown']
