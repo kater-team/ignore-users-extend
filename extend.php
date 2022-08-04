@@ -11,17 +11,20 @@
 
 namespace Kater\IgnoreUserExtend;
 
-use Flarum\Api\Serializer\UserSerializer;
-use Flarum\Discussion\Discussion;
 use Flarum\Extend;
-use Flarum\Post\Filter\PostFilterer;
-use Flarum\User\Search\UserSearcher;
+use Flarum\Api\Serializer\UserSerializer;
+
+use Flarum\Discussion\Discussion;
 use Flarum\Discussion\Search\DiscussionSearcher;
-use Flarum\Post\Filter\DiscussionFilter;
+
 use Flarum\Post\Post;
-use Flarum\User\Filter\UserFilterer;
+use Flarum\Post\Filter\PostFilterer;
+use Flarum\Post\Filter\DiscussionFilter;
 
 use Flarum\User\User;
+use Flarum\User\Search\UserSearcher;
+use Flarum\User\Filter\UserFilterer;
+
 
 return [
     (new Extend\Frontend('forum'))
