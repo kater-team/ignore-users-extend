@@ -4,9 +4,6 @@ namespace Kater\IgnoreUserExtend;
 
 use Flarum\Api\Serializer\UserSerializer;
 use Flarum\User\User;
-use Flarum\Extension\ExtensionManager;
-use Kater\IgnoreUserExtend\Model\IgnoreUser;
-use Flarum\Settings\SettingsRepositoryInterface;
 
 class AddUserApiIgnoreList
 {
